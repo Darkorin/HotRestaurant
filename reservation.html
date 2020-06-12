@@ -35,7 +35,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
     <script type="text/javascript">
-        // Question: What does this code do?
         $("#add-btn").on("click", function (event) {
             event.preventDefault();
             let newReservation = {
@@ -44,8 +43,7 @@
                 email: $("#email").val().trim(),
             };
 
-            // Question: What does this code do??
-            $.post("/api/reservation", newReservation)
+            $.post("/api/reservations", newReservation)
                 .then(function (data) {
                     console.log("add.html", data);
                 });
