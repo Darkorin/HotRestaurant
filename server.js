@@ -94,6 +94,12 @@ app.post("/api/reservations", function (req, res) {
             idNum++;
         }
     }
+
+    if (reservationList.length < 5) {
+        newReservation.isWaiting = false;
+    } else {
+        newReservation.isWaiting = true;
+    }
     reservationList.push(newReservation);
 
     res.json(newReservation);
