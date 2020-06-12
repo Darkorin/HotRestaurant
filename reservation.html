@@ -65,21 +65,21 @@
             <div class="card-body">
             <form>
                 <div class="form-group">
-                    <label for="exampleFormControlInput1">Name</label>
-                    <input type="text" class="form-control" placeholder="First name">
-                </div>
-                <div>
-                    <label for="exampleFormControlInput1">Phone Number</label>
-                    <input type="text" class="form-control" placeholder="Phone Number">
-                </div>
-                <div>
-                    <label for="exampleFormControlInput1">Email address</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-                </div>
-            <br>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                
-            </form>
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Full Name">
+            </div>
+            <div>
+            <label for="phoneNumber">Phone Number</label>
+            <input type="text" class="form-control" id="phoneNumber" placeholder="Phone Number">
+            </div>
+            <div>
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="email" placeholder="name@example.com">
+            </div>
+
+            <button  type="submit" class="btn btn-primary" id="add-btn">Submit</button>
+
+    </form>
         </div>
         </div>
         
@@ -97,6 +97,21 @@
         </button>
 </div>
 </div>
+    <script type="text/javascript">
+        $("#add-btn").on("click", function (event) {
+            event.preventDefault();
+            let newReservation = {
+                name: $("#name").val().trim(),
+                phoneNumber: $("#phoneNumber").val().trim(),
+                email: $("#email").val().trim(),
+            };
+
+            $.post("/api/reservations", newReservation)
+                .then(function (data) {
+                    console.log("add.html", data);
+                });
+        });
+    </script>
 </body>
 
 </html>
