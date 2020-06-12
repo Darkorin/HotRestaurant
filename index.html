@@ -9,8 +9,14 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <style>
+        body {
+        background-image: url('opt2.jpg') !important;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        }
         .display-4{
             text-align: center !important;
         }
@@ -21,9 +27,16 @@
             text-align: center !important;
         }
         .view{
-            text-align: left !important;
+           visibility: hidden;
         }
         .reservation{
+            visibility: hidden;
+        }
+        .jumbotron{
+            background-color: black;
+            color: #ffffff;
+        }
+        .btn{
             text-align: center !important;
         }
     </style>
@@ -36,16 +49,19 @@
             <p class="lead">We only have 5 tables! Book your seat before they are gone!</p>
             <hr class="my-4">
             <!-- <p>It uses utility classes for typography and spacing to space content out within the larger container.</p> -->
-            <a class="btn btn-danger btn-lg view" href="view.html" role="button">View Tables</a>
+            
+            <a href="view.html" class="btn btn-danger btn-lg">
+                <span class="fa fa-list-alt"></span> View Tables
+              </a>
             <a href="reservation.html" class="btn btn-info btn-lg">
-                <span class="glyphicon glyphicon-credit-card reservation"></span> Make Reservation
+                <span class="fa fa-credit-card"></span> Make Reservations
               </a>
         </div>
         <div class="row">
 
             <div class="col-12">
         
-                <div class="card mb-4">
+                <div class="card mb-4 view">
                 <div class="card-header">
                     <h3><strong>View Tables</strong></h3>
                 </div>
@@ -55,7 +71,7 @@
                 </div>
                 </div>
         
-                <div class="card">
+                <div class="card reservation">
                 <div class="card-header">
                     <h3><strong>Reservations</strong></h3>
                 </div>
@@ -81,5 +97,6 @@
             </button>
     </div>
     </div>
+</div>
 </body>
 </html>
