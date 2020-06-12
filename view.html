@@ -4,22 +4,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <title>Reservations</title>
+    <style>
+        body {
+        background-image: url('https://raw.githubusercontent.com/Darkorin/HotRestaurant/master/opt2.jpg') !important;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        }
+        .display-4{
+            text-align: center !important;
+        }
+        .lead{
+            text-align: center !important;
+        }
+        .lead{
+            text-align: center !important;
+        }
+        .view{
+           visibility: hidden;
+        }
+        .reservation{
+            visibility: hidden;
+        }
+        .jumbotron{
+            background-color: black;
+            color: #ffffff;
+        }
+        .header{
+            background-color: black;
+            color: #ffffff;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="card">
-        <div class="card-body">
+
+    <!-- //jumbotron -->
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-4">Hot Restaurant!</h1>
+            <p class="lead">We only have 5 tables! Book your seat before they are gone!</p>
+            <hr class="my-4">
+            <!-- <p>It uses utility classes for typography and spacing to space content out within the larger container.</p> -->
+            
+            <a href="/view/reservations" class="btn btn-danger btn-lg btn">
+                <span class="fa fa-list-alt"></span> View Tables
+              </a>
+            <a href="/reserve" class="btn btn-info btn-lg btn">
+                <span class="fa fa-credit-card"></span> Make Reservations
+              </a>
+        </div>
+    <div class="card title">
+        <div class="card-body header">
             <h2>Current Reservations</h2>
         </div>
     </div>
 
-    <div class="col-lg-8">
+    <div class="col-lg-12">
         <div class="Table 1">
 
             <h3 class="ID"></h3>
@@ -27,7 +73,7 @@
             <h3 class="Email"></h3>
             <h3 class="Phone"></h3>
         </div>
-        <div class="col-lg-8">
+        <div class="col-lg-12">
             <div class="Table 2">
 
                 <h3 class="ID"></h3>
@@ -35,7 +81,7 @@
                 <h3 class="Email"></h3>
                 <h3 class="Phone"></h3>
             </div>
-            <div class="col-lg-8">
+            <div class="col-lg-12">
                 <div class="Table 3">
 
                     <h3 class="ID"></h3>
@@ -43,7 +89,7 @@
                     <h3 class="Email"></h3>
                     <h3 class="Phone"></h3>
                 </div>
-                <div class="col-lg-8">
+                <div class="col-lg-12">
                     <div class="Table 4">
 
                         <h3 class="ID"></h3>
